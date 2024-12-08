@@ -1,0 +1,19 @@
+<h2>Current Events</h2>
+
+@if (events.length !== 0) {
+
+<section id="dashboard">
+  @for (curEvent of events; track $index) {
+  <div class="event">
+    <img src="" alt="example1" />
+    <p class="title">{{curEvent.name}}</p>
+    <p class="date">{{curEvent.date}}</p>
+    <a class="details-btn" [routerLink]="curEvent._id">Details</a>
+  </div>
+
+  }
+</section>
+}@else {
+
+<h4>No Events yet.</h4>
+}
